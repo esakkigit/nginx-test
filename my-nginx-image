@@ -1,0 +1,10 @@
+FROM nginx:latest
+
+# Replace default nginx welcome page
+COPY index.html /usr/share/nginx/html/
+
+# Expose port 8989
+EXPOSE 8989
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
